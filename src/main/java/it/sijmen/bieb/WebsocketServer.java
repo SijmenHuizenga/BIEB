@@ -57,7 +57,7 @@ public class WebsocketServer {
         String sterkte = o.get("sterkte").getAsString();
 
         try {
-            DB.create("INSERT INTO meldingdata (melding_opermerking, waarde_meting, lat, lon) " +
+            DB.create("INSERT INTO meldingdata (melding_opmerking, waarde_meting, lat, lon) " +
                     "VALUES ('"+opmerking+"', '"+sterkte+"', '"+lat+"', '"+lng+"')");
         } catch (SQLException e) {
             System.err.println("Niet gelukt melding op te slaan in database.");

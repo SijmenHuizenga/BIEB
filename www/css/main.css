@@ -6,20 +6,36 @@ html {
 body {
 	background-color: #2ecc71;
 	margin: 0px;
+	background: red; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, #e74c3c , #e67e22); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #e74c3c , #e67e22); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #e74c3c , #e67e22); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #e74c3c , #e67e22); /* Standard syntax (must be last) */
 }
 a {
 	text-decoration: none;
 }
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
 .wrapper {
 	height: 100%;
+	text-align: center;
 }
 .button-wrapper {
-	text-align: center;
 	padding: 2em;
 	height: 30%;
 }
 .button-melding {
 	background-color: #e74c3c;
+    background: -webkit-linear-gradient(-90deg, #e74c3c , #c0392b); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #e74c3c , #c0392b); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #e74c3c , #c0392b); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #e74c3c , #c0392b); /* Standard syntax (must be last) */
 }
 .button-plannen {
 	background-color: #e67e22;
@@ -32,4 +48,38 @@ a {
 	font-family: 'Oxygen', sans-serif;
 	text-transform: uppercase;
 	font-size: 3em;
+}
+.melding-header {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 3em;
+	color: white;
+	text-transform: uppercase;
+	background-color: rgba(193,193,193,0.3);
+	padding: 20px;
+}
+textarea {
+	padding: 1em;
+	width: 80%;
+	height: 80%;
+	border-radius: 0px;
+	color: #2980b9; /* For browsers that do not support gradients */    
+    color: -webkit-linear-gradient(left, #2980b9 , #64A5D0); /* For Safari 5.1 to 6.0 */
+    color: -o-linear-gradient(left, #2980b9 , #64A5D0); /* For Opera 11.1 to 12.0 */
+    color: -moz-linear-gradient(left, #2980b9 , #64A5D0); /* For Firefox 3.6 to 15 */
+    color: linear-gradient(left, #2980b9 , #64A5D0); /* Standard syntax (must be last) */
+}
+.wrapper-next {
+	text-align: center;
+}
+.button-next {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 1em;
+	color: white;
+	text-transform: uppercase;
+	background-color: rgba(193,193,193,0.3);
+	position: fixed;
+	bottom: 1em;
+	width: 50%;
+	right: 25%;
+	left: 25%;
 }

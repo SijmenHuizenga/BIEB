@@ -16,8 +16,7 @@ function verzenden(){
 var ws;
 
 document.addEventListener("deviceready", function(){
-    ws = new WebSocket("ws://35.157.253.195/api");
-    //ws = new WebSocket("ws://localhost:8090/api");
+    ws = openWS();
     navigator.geolocation.getCurrentPosition(onLocationReceived, onLocationError);
     document.getElementById("opmerking-melding").value = window.localStorage.getItem("opmerking-melding");
     document.getElementById("sterkte-melding").value = window.localStorage.getItem("opmerking-melding");

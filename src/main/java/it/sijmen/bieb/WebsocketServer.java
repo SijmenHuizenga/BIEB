@@ -58,7 +58,7 @@ public class WebsocketServer {
 
         try {
             DB.create("INSERT INTO meldingdata (melding_opermerking, waarde_meting, lat, lon) " +
-                    "VALUES (?, ?, ?, ?)", opmerking, sterkte, lat, lng);
+                    "VALUES ('"+opmerking+"', '"+sterkte+"', '"+lat+"', '"+lng+"')");
         } catch (SQLException e) {
             System.err.println("Niet gelukt melding op te slaan in database.");
             e.printStackTrace();

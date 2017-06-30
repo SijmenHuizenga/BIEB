@@ -25,10 +25,10 @@ public class DB {
         }
     }
     
-    public static void create(String query, String... args) throws SQLException {
+    public static void create(String query) throws SQLException {
         Connection connection = openConn();
         Statement statement = connection.createStatement();
-        statement.execute(query, args);
+        statement.execute(query);
     }
     
 

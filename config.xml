@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="nl.bieb.baasineigenbuurt" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>BIEB!</name>
+    <splash src="splash.png" />
     <description>
         Ben baas in je eigen buurt! Download de app en los geluidsoverlast makkelijk op.
     </description>

@@ -12,6 +12,23 @@ body {
     background: -moz-linear-gradient(left, #e74c3c , #e67e22); /* For Firefox 3.6 to 15 */
     background: linear-gradient(left, #e74c3c , #e67e22); /* Standard syntax (must be last) */
 }
+p {
+	color: #222;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2em;
+	margin: 5px 0px;
+}
+
+input[type="time"] {
+	padding: 20px;
+	width: 130px;
+	height: 30px;
+}
+input[type="date"] {
+	padding: 20px;
+	width: 130px;
+	height: 30px;
+}
 a {
 	text-decoration: none!important;
 }

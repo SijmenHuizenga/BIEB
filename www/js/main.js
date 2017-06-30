@@ -21,6 +21,9 @@ function onLocationReceived(position) {
         lng: lng
     }));
     console.log("sent POS");
+	navigator.notification.alert(
+		'Uw locatie is succesvol vezonden', null, "Verzonden!", "Sluiten"
+	)
 }
 
 function onLocationError(error) {

@@ -22,6 +22,14 @@ input[type="radio"] {
 	-o-appearance: none;
 	appearance: none;
 }
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 3em;
+    height: 175px;
+    padding: 0 5px;
+}
 .sub-header {
 	color: black;
 	margin-bottom: 20px;

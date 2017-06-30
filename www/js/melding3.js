@@ -1,4 +1,5 @@
 function verzenden(){
+    document.getElementById("verzendknop").innerHTML="Verzenden...";
     var data = {
         type: "MELDING",
         lat: window.localStorage.getItem("lat-melding"),
@@ -8,6 +9,9 @@ function verzenden(){
     };
     ws.send(JSON.stringify(data));
     console.log("sent POS", data);
+    document.getElementById("verzendknop").innerHTML="Verzenden...";
+    crossalert("Bedankt! De melding is voltooid.", "Klaar", "Ok");
+    window.location = "./index.html";
 }
 var ws;
 

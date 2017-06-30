@@ -10,7 +10,6 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -45,9 +44,40 @@ public class WebsocketServer {
         
         String type = o.get("type").getAsString();
         switch(type){
-            case "MELDING": melding(o);
+            case "MELDING": melding(o); break;
+            case "GETMELDINGEN": getMeldingen(session); break;
+            case "PLANNING": planning(o); break;
         }
         
+    }
+
+    private void planning(JsonObject o) {
+        Planning planning = new Planning(
+                o.get("categorie").getAsString(),
+                o.get("lat").getAsString(),
+                o.get("lng").getAsString(),
+                o.get("sterkte").getAsString(),
+                o.get("startstamp").getAsString(),
+                o.get("eindstamp").getAsString()
+        );
+        try {
+            DB.savePlanning(planning);
+        } catch (Exception e) {
+            System.err.println("Niet gelukt melding op te slaan in database.");
+            e.printStackTrace();
+        }
+    }
+
+
+    private void getMeldingen(Session session) {
+        try {
+            session.getRemote().sendString(
+                gson.toJson(DB.getMeldingen())
+            );
+        } catch (Exception e) {
+            System.err.println("Niet geulukt trips op te halen.");
+            e.printStackTrace();
+        }
     }
 
     private void melding(JsonObject o) {
@@ -57,9 +87,10 @@ public class WebsocketServer {
         String sterkte = o.get("sterkte").getAsString();
 
         try {
-            DB.create("INSERT INTO meldingdata (melding_opmerking, waarde_meting, lat, lon) " +
-                    "VALUES ('"+opmerking+"', '"+sterkte+"', '"+lat+"', '"+lng+"')");
-        } catch (SQLException e) {
+            DB.saveMelding(
+                new Melding(lat, lng, opmerking, sterkte)
+            );
+        } catch (Exception e) {
             System.err.println("Niet gelukt melding op te slaan in database.");
             e.printStackTrace();
         }

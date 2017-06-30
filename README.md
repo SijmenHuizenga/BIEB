@@ -1,3 +1,14 @@
-# Hackathon Redesign NL 2017
-# Baas In Eigen Buurt: BIEB
+# A Blank PhoneGap App
+
+## Usage
+
+### PhoneGap CLI
+
+    $ phonegap create my-app --template blank
+
+### Desktop
+
+In your browser, open the file:
+
+    /www/index.html
 

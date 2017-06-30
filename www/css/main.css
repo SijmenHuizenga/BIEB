@@ -48,6 +48,43 @@ input[type="radio"] {
 	font-family: 'Oxygen', sans-serif;
 	text-transform: uppercase;
 	font-size: 3em;
+	position: relative;
+}
+.button-melding-text::after {
+	position: absolute;
+	font-family: 'bieb';
+	content: 'h';
+	text-transform: lowercase;
+	font-size: 1em;
+	width: 20%;
+	top: -80%;
+	
+	left: 40%;
+	right: 40%;
+}
+.button-plannen-text::after {
+	position: absolute;
+	font-family: 'bieb';
+	content: 'i';
+	text-transform: lowercase;
+	font-size: 1em;
+	width: 20%;
+	top: -80%;
+	
+	left: 40%;
+	right: 40%;
+}
+.button-maps-text::after {
+	position: absolute;
+	font-family: 'bieb';
+	content: 'g';
+	text-transform: lowercase;
+	font-size: 1em;
+	width: 20%;
+	top: -80%;
+	
+	left: 40%;
+	right: 40%;
 }
 .melding-header {
 	font-family: 'Oxygen', sans-serif;
@@ -80,6 +117,36 @@ textarea {
 	position: fixed;
 	bottom: 1em;
 	width: 50%;
-	right: 25%;
-	left: 25%;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+}
+.button-next-loading {
+	-webkit-animation-name: verzenden;
+    -webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: verzenden;
+    animation-duration: 4s;
+	animation-iteration-count: infinite;
+	color: rgba(255,255,255,0.80);
+}
+.verzenden-1 {
+	display: none;
+}
+.verzenden-2 {
+	display: none;
+}
+@-webkit-keyframes verzenden {
+    0%   {background-color: rgba(59,59,59,0.30); width: 50%; color: rgba(255,255,255,0.80);}
+    25%  {background-color: rgba(193,193,193,0.3); width: 75%; color: rgba(102,102,102,0.80);}
+    50%  {background-color: rgba(59,59,59,0.30); width: 100%; color: rgba(255,255,255,0.80);}
+    75%  {background-color: rgba(193,193,193,0.3); width: 75%; color: rgba(102,102,102,0.80);}
+    100% {background-color: rgba(59,59,59,0.30); width: 50%; color: rgba(255,255,255,0.80);}
+}
+@keyframes verzenden {
+   	0%   {background-color: rgba(59,59,59,0.30); width: 50%; color: rgba(255,255,255,0.80);}
+    25%  {background-color: rgba(193,193,193,0.3); width: 75%; color: rgba(102,102,102,0.80);}
+    50%  {background-color: rgba(59,59,59,0.30); width: 100%; color: rgba(255,255,255,0.80);}
+    75%  {background-color: rgba(193,193,193,0.3); width: 75%; color: rgba(102,102,102,0.80);}
+    100% {background-color: rgba(59,59,59,0.30); width: 50%; color: rgba(255,255,255,0.80);}
 }

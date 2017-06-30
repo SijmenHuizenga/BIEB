@@ -9,4 +9,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <engine name="browser" spec="~4.1.0" />
 </widget>

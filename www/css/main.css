@@ -33,3 +33,8 @@ a {
 	text-transform: uppercase;
 	font-size: 3em;
 }
+.melding-header {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 3em;
+	color: white;
+}

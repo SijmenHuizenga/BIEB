@@ -6,6 +6,8 @@
         <title>Melding</title>
         <link href="css/main.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oxygen" rel="stylesheet">
+        <script src="js/melding2.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
@@ -13,13 +15,14 @@
         	<div class="wrapper">
         		<div class="melding-container">
         			<h1 class="melding-header">geluid overlast</h1>
-        			
-        		</div>
-        		<a href="./melding3.html">
-					<div class="wrapper-next">
-						<div class="button-next"><h2>volgende</h2></div>
-					</div>
-        		</a>
+                    <input autofocus type="number" id="sterkte-melding" />
+
+                </div>
+                <div class="wrapper-next">
+                    <div class="button-next" onclick="volgende()">
+                        <h2>volgende</h2>
+                    </div>
+                </div>
         	</div>
         </section>
     </body>

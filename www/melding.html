@@ -6,6 +6,8 @@
         <title>Melding</title>
         <link href="css/main.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oxygen" rel="stylesheet">
+        <script src="js/melding.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
@@ -15,11 +17,9 @@
         			<h1 class="melding-header">melding maken</h1>
 					<textarea placeholder="Plaats hier uw opmerking." autofocus rows="8" id="opmerking-melding"></textarea>
         		</div>
-        		<a href="./melding2.html">
-					<div class="wrapper-next">
-						<div class="button-next"><h2>volgende</h2></div>
-					</div>
-        		</a>
+                <div class="wrapper-next">
+                    <div class="button-next" onclick="volgende()"><h2>volgende</h2></div>
+                </div>
         	</div>
         </section>
     </body>

@@ -6,6 +6,8 @@
         <title>Melding</title>
         <link href="css/main.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oxygen" rel="stylesheet">
+        <script src="js/main.js"></script>
+        <script src="js/melding3.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
@@ -14,13 +16,14 @@
         		<div class="melding-container">
         			<h1 class="melding-header">melding bevestigen</h1>
         			<textarea autofocus readonly rows="8" id="opmerking-melding"></textarea>
-        			
+        			<input id="location-melding" />
+        			<input id="sterkte-melding" />
         		</div>
-        		<a href="./index.html">
-					<div class="wrapper-next">
-						<div class="button-next"><h2>verzenden</h2></div>
-					</div>
-        		</a>
+
+                <div class="wrapper-next">
+                    <div class="button-next" onclick="verzenden()"><h2>verzenden</h2></div>
+                </div>
+
         	</div>
         </section>
     </body>

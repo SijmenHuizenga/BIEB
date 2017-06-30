@@ -2,10 +2,10 @@
 <widget id="nl.bieb.baasineigenbuurt" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>BIEB!</name>
     <description>
-        A blank PhoneGap app.
+        Ben baas in je eigen buurt! Download de app en los geluidsoverlast makkelijk op.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author href="hackathonmasters.com">
+        BIEB Team
     </author>
     <content src="index.html" />
     <access origin="*" />

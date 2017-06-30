@@ -5,6 +5,7 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Plannen</title>
         <link href="css/main.css" type="text/css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oxygen" rel="stylesheet">
         <link href="https://file.myfontastic.com/pAeGS27uRypJbCd62eeBsZ/icons.css" rel="stylesheet">
     </head>
@@ -13,8 +14,12 @@
         <section>
         	<div class="wrapper">
         		<div class="melding-container">
-        			<h1 class="melding-header">wat? hoe? wanneer?</h1>
-					<textarea placeholder="Plaats hier uw opmerking." autofocus rows="8" id="opmerking-plannen"></textarea>
+        			<h1 class="melding-header">wanneer?</h1>
+					<!--<textarea placeholder="Plaats hier uw opmerking." autofocus rows="8" id="opmerking-plannen"></textarea>-->
+       				<p>Start tijd</p><input type="time" id="start-time">
+       				<p>Eind tijd</p><input type="time" id="end-time"><br>
+       				<p>Start datum</p><input type="date" id="start-date">
+       				<p>Eind datum</p><input type="date" id="end-date"><br>
         		</div>
         		<a href="./index.html">
 					<div class="wrapper-next">

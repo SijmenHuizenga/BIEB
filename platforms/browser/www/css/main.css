@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 body {
 	background-color: #2ecc71;
@@ -16,6 +16,7 @@ a {
 .button-wrapper {
 	text-align: center;
 	padding: 2em;
+	height: 30%;
 }
 .button-melding {
 	background-color: #e74c3c;

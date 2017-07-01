@@ -1,13 +1,21 @@
 function verzenden(){
     document.getElementById("verzendknop").innerHTML="Verzenden...";
+
+    //YYYY-MM-DD HH24:MM
+    var s = document.getElementById("start-time").value;
+    var e = document.getElementById("end-time").value;
+
+    console.log(s);
+    console.log(e);
+
     var data = {
         type: "PLANNING",
         categorie: window.localStorage.getItem("category-plannen"),
         lat: window.localStorage.getItem("lat-plannen"),
         lng: window.localStorage.getItem("lng-plannen"),
         sterkte: window.localStorage.getItem("sterkte-planning"),
-        startstamp: "", //todo
-        eindstamp: "" //todo
+        startstamp: s,
+        eindstamp: e
     };
     ws.send(JSON.stringify(data));
     console.log("sent!", data);
@@ -26,7 +34,6 @@ function onLocationReceived(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
     console.log("lat : " + lat + " lng : " + lng);
-    document.getElementById("location-plannen").value = "lat : " + lat + " lng : " + lng;
     window.localStorage.setItem("lat-plannen", lat);
     window.localStorage.setItem("lng-plannen", lng);
 }

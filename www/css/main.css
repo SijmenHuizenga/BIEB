@@ -39,7 +39,7 @@ input[type="radio"] {
 	-o-appearance: none;
 	appearance: none;
 }
-input[type=range][orient=vertical]
+input[type=range][orient=diagonal]
 {
     writing-mode: bt-lr; /* IE */
     -webkit-appearance: slider-vertical; /* WebKit */
@@ -89,7 +89,6 @@ input[type=range][orient=vertical]
 	font-size: 1em;
 	width: 20%;
 	top: -80%;
-	
 	left: 40%;
 	right: 40%;
 }
@@ -197,7 +196,13 @@ textarea {
 }
 
 .range-slider {
-  width: 100%;
+  	width: 100%;
+	height: 30px;
+	border-top: 2px solid white;
+	background: -webkit-linear-gradient(left, #27ae60 , #e67e22 , #e74c3c); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #27ae60 , #e67e22 , #e74c3c); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #27ae60 , #e67e22 , #e74c3c); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #27ae60 , #e67e22 , #e74c3c); /* Standard syntax (must be last) */
 }
 
 .range-slider__range {
@@ -205,17 +210,17 @@ textarea {
   width: calc(100% - (73px));
   height: 10px;
   border-radius: 5px;
-  background: #d7dcdf;
+  background-color: transparent;
   outline: none;
   padding: 0;
   margin: 0;
 }
 .range-slider__range::-webkit-slider-thumb {
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: #2c3e50;
+  background: white;
   cursor: pointer;
   transition: background .15s ease-in-out;
 }
@@ -273,4 +278,21 @@ textarea {
 input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
+}
+
+.value-slider {
+	background-color: rgba(193,193,193,0.3);
+	color: white;
+	margin-top: 50px;
+	padding: 12px;
+}
+.value-slider-p {
+	color: #222;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2em;
+}
+.value-slider i {
+	color: #222;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1em;
 }

@@ -41,14 +41,15 @@ public class DB {
     
     public static ArrayList<Melding> getMeldingen() throws SQLException {
         ArrayList<Melding> meldingen = new ArrayList<>();
-        ResultSet select = DB.select("SELECT melding_opmerking, waarde_meting, lat, lon FROM meldingdata");
+        ResultSet select = DB.select("SELECT melding_opmerking, waarde_meting, lat, lon, tijdstip FROM meldingdata");
         while(select.next()){
             meldingen.add(
                     new Melding(
                             select.getString("lat"),
                             select.getString("lon"),
                             select.getString("melding_opmerking"),
-                            select.getString("waarde_meting")
+                            select.getString("waarde_meting"),
+                            select.getString("tijdstip")
                     )
             );
         }

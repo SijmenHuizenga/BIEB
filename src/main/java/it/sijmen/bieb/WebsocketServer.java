@@ -99,7 +99,7 @@ public class WebsocketServer {
 
         try {
             DB.saveMelding(
-                new Melding(lat, lng, opmerking, sterkte)
+                new Melding(lat, lng, opmerking, sterkte, null)
             );
         } catch (Exception e) {
             System.err.println("Niet gelukt melding op te slaan in database.");

@@ -1,4 +1,5 @@
 document.addEventListener("deviceready", loadMeldingen, false);
+document.addEventListener("deviceready", initMap, false);
 
 function loadMeldingen() {
     var container = document.getElementById("meldingencontainer");

@@ -16,8 +16,14 @@
         	<div class="wrapper">
         		<div class="melding-container">
         			<h1 class="melding-header">plannen maken</h1>
-					<input id="sterkte-planning" type="range" orient="vertical" />
-        		</div>
+					<div class="range-slider">
+  						<input class="range-slider__range" type="range" value="50" min="0" max="100" >
+					</div>
+               		<div class="value-slider">
+               			<p>Hinderlijk</p>
+               			<p class="value-slider-p">50<span>&#37;</span></p><i>Wekker, vrachtverkeer, deurbel</i>
+               		</div>
+               	</div>
                 <div class="wrapper-next">
                     <div class="button-next" onclick="volgende()"><h2>volgende</h2></div>
                 </div>

@@ -46,12 +46,12 @@ public class WebsocketServer {
         switch(type){
             case "MELDING": melding(o); break;
             case "GETMELDINGEN": getMeldingen(session); break;
-            case "PLANNING": planning(o); break;
+            case "PLANNING": planning(o, session); break;
         }
         
     }
 
-    private void planning(JsonObject o) {
+    private void planning(JsonObject o, Session session) {
         Planning planning = new Planning(
                 o.get("categorie").getAsString(),
                 o.get("lat").getAsString(),
@@ -65,6 +65,17 @@ public class WebsocketServer {
         } catch (Exception e) {
             System.err.println("Niet gelukt melding op te slaan in database.");
             e.printStackTrace();
+        }
+        
+        for(Session s : sessions){
+            if(s.equals(session))
+                continue;
+            try {
+                s.getRemote().sendString("Let op! Er komt een "+ planning.categorie +" event aan!\n" + 
+                    "Van " + planning.startstamp + " tot " + planning.eindstamp);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 function volgende(){
-    var opmerking = document.getElementById("sterkte-melding").value;
+    var opmerking = document.getElementById("sterkte-slider").value;
 
     if(opmerking == ""){
         crossalert("De sterkte is verplicht.", "Fout", "Terug");

@@ -5,7 +5,7 @@ function saveCategory() {
 }
 
 function volgende(){
-    var opmerking = document.getElementById("sterkte-planning").value;
+    var opmerking = document.getElementById("sterkte-slider").value;
 
     window.localStorage.setItem("sterkte-planning", opmerking);
     window.location = "./plannen3.html";

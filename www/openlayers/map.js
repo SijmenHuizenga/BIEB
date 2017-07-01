@@ -25,8 +25,8 @@ function initMap() {
             , new ol.layer.Group({
                 title: 'Specifieke lagen',
                 layers: [
-                   stationLayer = new ol.layer.Tile({
-                        title: 'Sensoren Den Bosch',
+                    stationLayer = new ol.layer.Tile({
+                        title: 'Sensordata Den Bosch',
                         source: stationSource = new ol.source.TileWMS({
                             url: 'http://35.157.253.195:8080/geoserver/BIEB/wms',
                             params: {
@@ -34,7 +34,7 @@ function initMap() {
                                 'TILED': true
                             },
                             serverType: 'geoserver'
-                        })
+                        }),
                     }),
                     meldingLayer = new ol.layer.Tile({
                         title: 'Geluidsoverlast meldingen',
@@ -45,13 +45,25 @@ function initMap() {
                                 'TILED': true
                             },
                             serverType: 'geoserver'
-                        })
+                        }),
+                    }),
+                    planningLayer = new ol.layer.Tile({
+                        title: 'Geplande evenementen',
+                        source: planningSource = new ol.source.TileWMS({
+                            url: 'http://35.157.253.195:8080/geoserver/BIEB/wms',
+                            params: {
+                                'LAYERS': 'BIEB:planningsdata',
+                                'TILED': true
+                            },
+                            serverType: 'geoserver'
+                        }),
                     })
-                 ]
+                ]
             })
-                            ],
+        ],
         view: view
     });
+
     map.on('singleclick', function (evt) {
         document.getElementById('info1').innerHTML = '';
         var viewResolution = /** @type {number} */ (view.getResolution());
@@ -70,6 +82,16 @@ function initMap() {
         });
         if (url) {
             document.getElementById('info2').innerHTML = '<iframe seamless src="' + url + '"></iframe>';
+        }
+    });
+    map.on('singleclick', function (evt) {
+        document.getElementById('info3').innerHTML = '';
+        var viewResolution = /** @type {number} */ (view.getResolution());
+        var url = planningSource.getGetFeatureInfoUrl(evt.coordinate, viewResolution, 'EPSG:3857', {
+            'INFO_FORMAT': 'text/html'
+        });
+        if (url) {
+            document.getElementById('info3').innerHTML = '<iframe seamless src="' + url + '"></iframe>';
         }
     });
     var layerSwitcher = new ol.control.LayerSwitcher({

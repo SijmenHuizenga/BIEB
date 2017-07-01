@@ -19,14 +19,9 @@ p {
 	margin: 5px 0px;
 }
 
-input[type="time"] {
+input[type="datetime-local"] {
 	padding: 20px;
-	width: 130px;
-	height: 30px;
-}
-input[type="date"] {
-	padding: 20px;
-	width: 130px;
+	width: 150px;
 	height: 30px;
 }
 a {
@@ -95,7 +90,7 @@ input[type=range][orient=diagonal]
 .button-plannen-text::after {
 	position: absolute;
 	font-family: 'bieb';
-	content: 'i';
+	content: 'l';
 	text-transform: lowercase;
 	font-size: 1em;
 	width: 20%;

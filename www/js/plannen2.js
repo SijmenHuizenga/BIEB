@@ -10,3 +10,4 @@ function volgende(){
     window.localStorage.setItem("sterkte-planning", opmerking);
     window.location = "./plannen3.html";
 }
+

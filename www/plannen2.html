@@ -7,6 +7,7 @@
         <link href="css/main.css" type="text/css" rel="stylesheet">
         <script src="js/jquery.js"></script>
         <script src="js/plannen2.js"></script>
+        <script src="js/listener.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oxygen" rel="stylesheet">
         <link href="https://file.myfontastic.com/pAeGS27uRypJbCd62eeBsZ/icons.css" rel="stylesheet">
     </head>
@@ -17,11 +18,12 @@
         		<div class="melding-container">
         			<h1 class="melding-header">plannen maken</h1>
 					<div class="range-slider">
-  						<input class="range-slider__range" id="sterkte-planning" type="range" value="50" min="0" max="100" >
+  						<input class="range-slider__range" id="sterkte-slider" type="range" value="50" min="1" max="100" >
 					</div>
                		<div class="value-slider">
-               			<p>Hinderlijk</p>
-               			<p class="value-slider-p">50<span>&#37;</span></p><i>Wekker, vrachtverkeer, deurbel</i>
+               			<p id="overlastnaam">Hinderlijk</p>
+               			<p id="overlaststerkte" class="value-slider-p">50<span>&#37;</span></p>
+                        <i id="overlastvoorbeeld">Wekker, fietsbel, deurbel</i>
                		</div>
                	</div>
                 <div class="wrapper-next">
